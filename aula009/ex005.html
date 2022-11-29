@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(29, 29, 29);
+            color: rgb(52, 122, 52);
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p class="texto-1">
+        Aqui vai o resultado
+    </p>
+    <p class="texto-2">
+        Aprendendo a usar o <strong>DOM</strong> em JavaScript.
+    </p>
+
+    <div name="msg">Clique em mim</div>
+
+    <script>
+        var mudardiv = window.document.getElementsByName('msg')[0]
+        mudardiv.innerText= 'Teste de Hacking'
+
+        var mudarparagrafo = window.document.getElementsByTagName('p')[0]
+        mudarparagrafo.innerText = 'Hackeei esse paragrafo com Javascript'
+
+        var selectCSS = window.document.querySelector('p.texto-1')
+        selectCSS.style.backgroundImage = 'linear-gradient(to right, black, rgb(77, 64, 252))'
+
+        var selec = window.document.querySelector('p.texto-2')
+        selec.style.backgroundImage = 'linear-gradient(to top, green, black)'
+        selec.style.color = "white"
+
+    </script>
+</body>
+</html>

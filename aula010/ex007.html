@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | Soma</title>
+
+    <style>
+       body{
+        font: normal 16pt arial;
+        background-color: rgb(94, 94, 94);
+        color: white;
+       }
+       input{
+        font: normal 16pt arial;
+        width: 100px;
+        box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.466);
+        border-radius: 5px;
+       }
+       div{
+        margin-top: 30px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="num1" id="inum1"> +
+    <input type="number" name="num2" id="inum2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function somar(){
+            var num1 = window.document.getElementById('inum1')
+            var num2 = window.document.querySelector('input#inum2')
+            let result = window.document.getElementById('res')
+            var tnum1 = Number(num1.value)
+            var tnum2 = Number(num2.value)
+            var s = tnum1 + tnum2
+            result.innerHTML = `A soma entre ${tnum1} e ${tnum2} é igual a : <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>
