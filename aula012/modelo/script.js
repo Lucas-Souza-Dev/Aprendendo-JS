@@ -1,0 +1,1 @@
+alert('Oi essa é a pagina modelo')
